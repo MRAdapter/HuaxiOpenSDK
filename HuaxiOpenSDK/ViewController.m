@@ -7,10 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "TKOpenController.h"
-#import "TKOpenController+DecorateKit.h"
-#import "TKVideoWitnessViewController.h"
-#import "TKCertManager.h"
 
 @interface ViewController ()
 
@@ -74,67 +70,6 @@
 
 }
 
-- (IBAction)btnOnClicked:(id)sender {
-    
-    NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithCapacity:5];
-    
-//    [dic setObject:@"http://120.27.149.82" forKey:@"channel_url"];
-//
-//    [dic setValue:@"100DD998EB5BF11FC554C861601628EC" forKey:@"channel_key"];//channel_key : 渠道校验密钥
-//
-//    [dic setValue:@"changjiang" forKey:@"sec_name_en"];//sec_name_en :  券商英文简称
-//
-//    [dic setValue:@"https://wxtest.wxzqgs.com:8010/h5/m/openAccount/views/account/index.html" forKey:@"h5Url"];
-    
-    UITextField *tf = [self.view viewWithTag:200];
-
-    if (tf) {
-
-        if (![@"" isEqualToString:[tf text]]) {
-
-             [dic setValue:@"https://testhexin.cczq.com:8990/m/kh/index.html" forKey:@"channel_url"];
-
-        }else{
-
-        }
-    }
-    
-   
-    
-//    [dic setValue:@"1" forKey:@"accessEnvi"];
-//
-//    [dic setValue:@"0" forKey:@"statusBarStyle"];
-//
-//    [dic setValue:@"15500000002" forKey:@"mobile"];
-    
-//    NSDictionary * d = [NSDictionary dictionaryWithObjectsAndKeys:@"eyJzaWRpIjp7Im1vYmlsZSI6IjE1MDcyMDk5OTc4In0sImV4dCI6IjhLZTZ5RUZ3WWxUdHpsdWxCSTdUUklZMlpvRktweGp3NTZCMUVGZUExbU1lUHoxNldBSHRweGRXclQ1VGhqcXIifQ..",@"channel_ext", nil];
-//
-//    [dic setValue:d forKey:@"channel_param"];
-//
-//    [dic setValue:@"eyJzaWRpIjp7Im1vYmlsZSI6IjE1MDcyMDk5OTc4In0sImV4dCI6IjhLZTZ5RUZ3WWxUdHpsdWxCSTdUUklZMlpvRktweGp3NTZCMUVGZUExbU1lUHoxNldBSHRweGRXclQ1VGhqcXIifQ.." forKey:@"channel_seq"];
-//
-//    [dic setValue:@"0x58b3fa" forKey:@"statusBarBgColor"];
-
-    TKOpenController *oCtl = [[TKOpenController alloc] initWithParams:dic];
-    
-//    oCtl.statusBarBgColor = [TKUIHelper colorWithHexString:@"#022553"];
-//
-    oCtl.statusBarStyle = UIStatusBarStyleDefault;
-    
-    oCtl.isHasHeader = YES;
-    
-//    [self.navigationController pushViewController:oCtl animated:YES];
-
-    [self presentViewController:oCtl animated:YES completion:nil];
-    
-//    [TKYKHEmbedHelper startTKYKHSDKWithParam:dic handleController:self completion:^(id authenResult) {}];
-    
-//    [self addChildViewController:oCtl];
-//
-//    [self.view addSubview:oCtl.view];
-    
-//    CFTimeInterval tInterval = [self.view.layer convertTime:CACurrentMediaTime() toLayer:nil];
-}
 
 
 @end
